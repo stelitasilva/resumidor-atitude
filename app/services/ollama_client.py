@@ -15,7 +15,7 @@ class OllamaClient:
             return False
 
     async def generate_chat(self, payload: dict) -> dict:
-        async with httpx.AsyncClient(timeout=180.0) as client:
+        async with httpx.AsyncClient(timeout=300.0) as client:  # Increased from 180 to 300
             try:
                 response = await client.post(
                     f"{self.base_url}/api/chat",
@@ -23,7 +23,9 @@ class OllamaClient:
                 )
                 response.raise_for_status()
                 return response.json()
-            except httpx.ReadTimeout:
-                raise Exception("Timeout")
+            except httpx.ReadTimeout as e:
+                raise Exception(f"ReadTimeout after 300 seconds: {e}")
+            except httpx.TimeoutException as e:
+                raise Exception(f"Timeout: {e}")
             except httpx.HTTPError as e:
                 raise Exception(f"Erro HTTP: {e}")

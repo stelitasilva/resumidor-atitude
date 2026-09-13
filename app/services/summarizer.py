@@ -99,10 +99,9 @@ class SummarizerService:
         try:
             raw_response = await self.ollama.generate_chat(payload)
         except Exception as e:
-            if "Timeout" in str(e):
-                raise Exception("A geração excedeu o tempo previsto. Tente novamente com menos registros.")
-            else:
-                raise Exception(f"Erro na comunicação com Ollama: {e}")
+            error_msg = str(e)
+            print(f"[DEBUG] Ollama error: {error_msg}")
+            raise Exception(error_msg)
 
         try:
             content = raw_response["message"]["content"]
