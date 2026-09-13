@@ -30,6 +30,11 @@ for i in {1..60}; do\n\
   echo "Waiting... ($i/60)"\n\
   sleep 1\n\
 done\n\
+echo "Checking for qwen3:4b model..."\n\
+if ! curl -s http://127.0.0.1:11434/api/tags | grep -q qwen; then\n\
+  echo "Pulling qwen3:4b model (this may take a few minutes on first run)..."\n\
+  ollama pull qwen3:4b || echo "Failed to pull model, will try on next startup"\n\
+fi\n\
 echo "Starting FastAPI server..."\n\
 python -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}\n' > /app/start.sh
 
