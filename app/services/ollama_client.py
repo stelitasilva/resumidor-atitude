@@ -9,7 +9,7 @@ class OllamaClient:
     async def check_health(self) -> bool:
         try:
             async with httpx.AsyncClient(timeout=5) as client:
-                response = await client.get(self.base_url)
+                response = await client.get(f"{self.base_url}/api/tags")
                 return response.status_code == 200
         except:
             return False
