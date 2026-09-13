@@ -8,6 +8,7 @@ RUN curl -fsSL https://ollama.com/install.sh | sh
 
 # Configurar a pasta do nosso app
 WORKDIR /app
+RUN mkdir -p resultados
 COPY . /app
 
 # Instalar as bibliotecas do Python
