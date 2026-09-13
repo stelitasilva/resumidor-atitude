@@ -1,7 +1,7 @@
 FROM python:3.12-slim
 
-# Instalar dependências do sistema e o curl
-RUN apt-get update && apt-get install -y curl bash
+# Instalar dependências do sistema, o curl e zstd (necessário para o Ollama)
+RUN apt-get update && apt-get install -y curl bash zstd
 
 # Instalar o Ollama no sistema
 RUN curl -fsSL https://ollama.com/install.sh | sh
