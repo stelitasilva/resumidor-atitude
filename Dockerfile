@@ -19,8 +19,20 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Criar o script que liga o Ollama e o FastAPI juntos
 RUN echo '#!/bin/bash\n\
-ollama serve &\n\
-sleep 5\n\
+set -e\n\
+echo "Starting Ollama..."\n\
+ollama serve > /var/log/ollama.log 2>&1 &\n\
+OLLAMA_PID=$!\n\
+echo "Waiting for Ollama to be ready..."\n\
+for i in {1..60}; do\n\
+  if curl -s http://localhost:11434 > /dev/null 2>&1; then\n\
+    echo "Ollama is ready!"\n\
+    break\n\
+  fi\n\
+  echo "Waiting... ($i/60)"\n\
+  sleep 1\n\
+done\n\
+echo "Starting FastAPI server..."\n\
 python -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}\n' > /app/start.sh
 
 RUN chmod +x /app/start.sh
