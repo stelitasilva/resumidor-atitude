@@ -1,0 +1,48 @@
+{
+  "caso": "FIC-003",
+  "entrada": "E01",
+  "modelo": "qwen3:4b",
+  "metodo": "instrucoes_e_exemplos_supervisionados",
+  "versao_prompt": 3,
+  "status": "Pendente de revisão",
+  "tempo_total_segundos": 21.27,
+  "tempo_carga_segundos": 0.01,
+  "tempo_geracao_segundos": 20.65,
+  "resumo": {
+    "consumo": {
+      "status_dados": "sem_dados",
+      "situacao_atual": "Não há informação sobre consumo de substâncias nos registros selecionados.",
+      "mudancas": "Não há registros suficientes para descrever mudanças.",
+      "lacunas_divergencias": [
+        "Ausência de informação não significa ausência de consumo."
+      ],
+      "evidencias": []
+    },
+    "familia": {
+      "status_dados": "sem_dados",
+      "situacao_atual": "Não há informação sobre vínculos familiares nos registros selecionados.",
+      "mudancas": "Não há registros suficientes para descrever mudanças.",
+      "lacunas_divergencias": [
+        "Ausência de informação não significa ausência de vínculos familiares."
+      ],
+      "evidencias": []
+    },
+    "moradia": {
+      "status_dados": "sem_dados",
+      "situacao_atual": "Não há informação sobre moradia nos registros selecionados.",
+      "mudancas": "Não há registros suficientes para descrever mudanças.",
+      "lacunas_divergencias": [
+        "Ausência de informação não significa ausência de moradia."
+      ],
+      "evidencias": []
+    }
+  },
+  "fontes_consultaveis": {
+    "FIC003-R01": {
+      "data": "2026-09-10",
+      "texto_original": "Primeiro atendimento fictício. O assistido solicitou informações sobre acesso a documentação. Informou telefone de uma pessoa de referência, sem indicar parentesco. Não foram registrados dados sobre moradia, renda, vínculos familiares, saúde ou uso de substâncias. Foi combinado retorno em 17/09/2026. Não há outros atendimentos registrados para este caso."
+    }
+  },
+  "erros_de_estrutura_referencias": [],
+  "observacao": "A validação automática não comprova fidelidade semântica nem cobertura."
+}

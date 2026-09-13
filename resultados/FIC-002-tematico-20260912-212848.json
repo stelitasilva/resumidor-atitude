@@ -1,0 +1,63 @@
+{
+  "caso": "FIC-002",
+  "entrada": "E02",
+  "modelo": "qwen3:4b",
+  "metodo": "instrucoes_e_exemplos_supervisionados",
+  "versao_prompt": "3.1",
+  "status": "Pendente de revisão",
+  "tempo_total_segundos": 110.4,
+  "tempo_carga_segundos": 0.0,
+  "tempo_geracao_segundos": 39.46,
+  "resumo": {
+    "consumo": {
+      "status_dados": "sem_dados",
+      "situacao_atual": "Não há informação sobre consumo de substâncias nos registros selecionados.",
+      "mudancas": "Não há registros suficientes para descrever mudanças no consumo.",
+      "lacunas_divergencias": [
+        "Ausência de informação não significa ausência de consumo."
+      ],
+      "evidencias": []
+    },
+    "familia": {
+      "status_dados": "com_dados",
+      "situacao_atual": "Em 09/09/2026, a assistida informou ter retomado contato telefônico com a mãe.",
+      "mudancas": "Em 12/08/2026, informou sem contato recente com a mãe; em 09/09/2026, informou retomar contato telefônico com a mãe.",
+      "lacunas_divergencias": [
+        "Não há informações sobre vínculos familiares além do contato com a mãe."
+      ],
+      "evidencias": [
+        "FIC002-R02",
+        "FIC002-R04"
+      ]
+    },
+    "moradia": {
+      "status_dados": "divergente",
+      "situacao_atual": "Em 26/08/2026, há divergência: o campo indica residência familiar e a observação registra dormir na rua; em 09/09/2026, a assistida informou continuar dormindo na rua.",
+      "mudancas": "Em 12/08/2026, informou estar em situação de rua; em 26/08/2026, o campo indica residência familiar mas a observação registra dormir na rua; em 09/09/2026, informou continuar dormindo na rua.",
+      "lacunas_divergencias": [
+        "A divergência sobre moradia não foi esclarecida até 09/09/2026."
+      ],
+      "evidencias": [
+        "FIC002-R02",
+        "FIC002-R03",
+        "FIC002-R04"
+      ]
+    }
+  },
+  "fontes_consultaveis": {
+    "FIC002-R02": {
+      "data": "2026-08-12",
+      "texto_original": "Início do novo período fictício de acompanhamento. A assistida informou estar em situação de rua e sem contato recente com a mãe. Solicitou apoio para obter segunda via de documento. Não informou situação atual de trabalho ou renda."
+    },
+    "FIC002-R03": {
+      "data": "2026-08-26",
+      "texto_original": "A assistida relatou ter agendado atendimento para obter documento em 02/09. Não apresentou comprovante do agendamento. O campo de situação de moradia foi preenchido como residência familiar, mas a observação do mesmo atendimento registra que ela continua dormindo na rua. Divergência ainda não esclarecida."
+    },
+    "FIC002-R04": {
+      "data": "2026-09-09",
+      "texto_original": "A assistida compareceu ao atendimento do programa. Não há confirmação sobre comparecimento ao agendamento de documentação nem emissão do documento. A divergência sobre moradia permanece sem esclarecimento. Informou ter retomado contato telefônico com a mãe, sem relatar mudança de residência."
+    }
+  },
+  "erros_de_estrutura_referencias": [],
+  "observacao": "A validação automática não comprova fidelidade semântica nem cobertura."
+}

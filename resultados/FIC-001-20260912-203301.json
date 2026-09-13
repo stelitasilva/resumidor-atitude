@@ -1,0 +1,79 @@
+{
+  "caso": "FIC-001",
+  "entrada": "E01",
+  "modelo": "qwen3:4b",
+  "versao_prompt": 2,
+  "status": "Pendente de revisão",
+  "tempo_total_segundos": 56.8,
+  "tempo_carga_segundos": 17.11,
+  "tempo_geracao_segundos": 38.68,
+  "resumo": {
+    "afirmacoes": [
+      {
+        "assunto": "Situação de moradia",
+        "afirmacao": "O assistido relata estar sem moradia fixa (2026-08-03).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R01",
+            "trecho": "Admissão fictícia. O assistido relata estar sem moradia fixa."
+          }
+        ]
+      },
+      {
+        "assunto": "Uso de álcool",
+        "afirmacao": "O assistido relatou uso de álcool em cinco dias da semana anterior (2026-08-10).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R02",
+            "trecho": "O assistido compareceu ao encontro. Relatou uso de álcool em cinco dias da semana anterior."
+          }
+        ]
+      },
+      {
+        "assunto": "Uso de álcool",
+        "afirmacao": "O assistido relatou uso de álcool em dois dias da semana anterior (2026-08-24).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R03",
+            "trecho": "O assistido relatou uso de álcool em dois dias da semana anterior."
+          }
+        ]
+      },
+      {
+        "assunto": "Hospedagem",
+        "afirmacao": "O assistido está hospedado na casa de um conhecido desde 20/08/2026 (2026-08-24).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R03",
+            "trecho": "Informou estar hospedado na casa de um conhecido desde 20/08, sem definição do período de permanência."
+          }
+        ]
+      },
+      {
+        "assunto": "Busca por educação",
+        "afirmacao": "O assistido pediu informações sobre educação de jovens e adultos (2026-08-24).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R03",
+            "trecho": "Pediu informações sobre educação de jovens e adultos."
+          }
+        ]
+      },
+      {
+        "assunto": "Busca por educação",
+        "afirmacao": "A busca de informações sobre educação permanece em andamento, sem confirmação de matrícula (2026-09-07).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R04",
+            "trecho": "A busca de informações sobre educação permanece em andamento, sem confirmação de matrícula."
+          }
+        ]
+      }
+    ],
+    "limitacoes": [
+      "Não há registros suficientes para comparar a frequência de uso de álcool entre 2026-08-10 e 2026-08-24 (última medição em 2026-08-24)."
+    ]
+  },
+  "erros_de_referencias": [],
+  "observacao": "Validação de referências não comprova fidelidade semântica nem ausência de omissões."
+}

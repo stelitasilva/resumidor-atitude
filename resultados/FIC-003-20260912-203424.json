@@ -1,0 +1,29 @@
+{
+  "caso": "FIC-003",
+  "entrada": "E01",
+  "modelo": "qwen3:4b",
+  "versao_prompt": 2,
+  "status": "Pendente de revisão",
+  "tempo_total_segundos": 12.23,
+  "tempo_carga_segundos": 0.0,
+  "tempo_geracao_segundos": 11.63,
+  "resumo": {
+    "afirmacoes": [
+      {
+        "assunto": "Acesso a documentação",
+        "afirmacao": "O assistido solicitou informações sobre acesso a documentação e informou telefone de uma pessoa de referência, sem indicar parentesco (FIC003-R01, 2026-09-10).",
+        "evidencias": [
+          {
+            "registro_id": "FIC003-R01",
+            "trecho": "Primeiro atendimento fictício. O assistido solicitou informações sobre acesso a documentação. Informou telefone de uma pessoa de referência, sem indicar parentesco. Não foram registrados dados sobre moradia, renda, vínculos familiares, saúde ou uso de substâncias. Foi combinado retorno em 17/09/2026. Não há outros atendimentos registrados para este caso."
+          }
+        ]
+      }
+    ],
+    "limitacoes": [
+      "Não há registros suficientes para medições temporais comparativas"
+    ]
+  },
+  "erros_de_referencias": [],
+  "observacao": "Validação de referências não comprova fidelidade semântica nem ausência de omissões."
+}

@@ -1,0 +1,75 @@
+{
+  "caso": "FIC-001",
+  "entrada": "E01",
+  "modelo": "qwen3:4b",
+  "metodo": "instrucoes_e_exemplos_supervisionados",
+  "versao_prompt": 3,
+  "status": "Pendente de revisão",
+  "tempo_total_segundos": 53.42,
+  "tempo_carga_segundos": 0.0,
+  "tempo_geracao_segundos": 51.08,
+  "resumo": {
+    "consumo": {
+      "status_dados": "com_dados",
+      "situacao_atual": "Em 07/09/2026, o assistido relatou uso de álcool em dois dias da semana anterior.",
+      "mudancas": "Houve mudança autorrelatada de uso de álcool em cinco dias da semana anterior (08/10/2026) para uso em dois dias da semana anterior (24/08/2026).",
+      "lacunas_divergencias": [
+        "Não há informação registrada sobre a duração do período de permanência na casa do conhecido."
+      ],
+      "evidencias": [
+        "FIC001-R01",
+        "FIC001-R02",
+        "FIC001-R03",
+        "FIC001-R04"
+      ]
+    },
+    "familia": {
+      "status_dados": "com_dados",
+      "situacao_atual": "Em 07/09/2026, o assistido informou que a irmã o visitou.",
+      "mudancas": "Houve contato eventual com a irmã em 03/08/2026; em 10/08/2026, houve conversa por telefone com a irmã.",
+      "lacunas_divergencias": [
+        "Não há informação sobre a frequência de contato com a irmã após 10/08/2026."
+      ],
+      "evidencias": [
+        "FIC001-R01",
+        "FIC001-R02",
+        "FIC001-R03",
+        "FIC001-R04"
+      ]
+    },
+    "moradia": {
+      "status_dados": "com_dados",
+      "situacao_atual": "Em 07/09/2026, o assistido continua hospedado na casa do conhecido sem definição do período de permanência.",
+      "mudancas": "Em 03/08/2026, informou estar sem moradia fixa; em 24/08/2026, informou estar hospedado na casa de um conhecido desde 20/08/2026.",
+      "lacunas_divergencias": [
+        "Não foi registrada a duração do período de permanência na casa do conhecido."
+      ],
+      "evidencias": [
+        "FIC001-R01",
+        "FIC001-R02",
+        "FIC001-R03",
+        "FIC001-R04"
+      ]
+    }
+  },
+  "fontes_consultaveis": {
+    "FIC001-R01": {
+      "data": "2026-08-03",
+      "texto_original": "Admissão fictícia. O assistido relata estar sem moradia fixa. Informa contato eventual com a irmã e interesse em retomar os estudos. Não há informação registrada sobre renda. Foi combinado novo encontro para 10/08/2026."
+    },
+    "FIC001-R02": {
+      "data": "2026-08-10",
+      "texto_original": "O assistido compareceu ao encontro. Relatou uso de álcool em cinco dias da semana anterior. Informou que conversou com a irmã por telefone. Foi combinado avaliar alternativas de educação no encontro seguinte; não há registro de matrícula escolar."
+    },
+    "FIC001-R03": {
+      "data": "2026-08-24",
+      "texto_original": "O assistido relatou uso de álcool em dois dias da semana anterior. Informou estar hospedado na casa de um conhecido desde 20/08, sem definição do período de permanência. Pediu informações sobre educação de jovens e adultos. O técnico forneceu informações; não registrou encaminhamento formal nem matrícula."
+    },
+    "FIC001-R04": {
+      "data": "2026-09-07",
+      "texto_original": "O assistido informou que continua hospedado na casa do conhecido e que a irmã o visitou. Não foi registrada nova avaliação sobre frequência de uso de álcool. A busca de informações sobre educação permanece em andamento, sem confirmação de matrícula."
+    }
+  },
+  "erros_de_estrutura_referencias": [],
+  "observacao": "A validação automática não comprova fidelidade semântica nem cobertura."
+}

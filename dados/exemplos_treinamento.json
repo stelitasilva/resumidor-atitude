@@ -1,0 +1,28 @@
+{
+  "descricao": "Exemplos fictícios revisados usados para ensinar o formato temático. Não fazem parte dos casos de avaliação.",
+  "exemplos": [
+    {
+      "entrada": {
+        "caso": "TREINO-001",
+        "entrada": "E01",
+        "registros": [
+          {"id": "T001-R01", "data": "2026-05-05", "entrada": "E01", "texto": "A pessoa relatou uso diário de crack na semana anterior. Informou estar dormindo em abrigo provisório. Disse ter conversado com o irmão no fim de semana."},
+          {"id": "T001-R02", "data": "2026-05-19", "entrada": "E01", "texto": "A pessoa relatou uso de crack em três dias da semana anterior. Informou que alugou um quarto em 17/05, sem registrar duração do contrato. Não houve nova informação sobre contato com o irmão."}
+        ]
+      },
+      "saida": {
+        "consumo": {"status_dados": "com_dados", "situacao_atual": "Em 19/05/2026, a pessoa relatou uso de crack em três dias da semana anterior.", "mudancas": "Houve mudança autorrelatada de uso diário na semana anterior, em 05/05/2026, para uso em três dias da semana anterior, em 19/05/2026.", "lacunas_divergencias": ["Não há avaliação posterior a 19/05/2026."], "evidencias": ["T001-R01", "T001-R02"]},
+        "familia": {"status_dados": "com_dados", "situacao_atual": "O último registro sobre vínculo familiar é de 05/05/2026, quando a pessoa informou ter conversado com o irmão no fim de semana.", "mudancas": "Não há registros comparáveis para descrever mudança no vínculo familiar.", "lacunas_divergencias": ["Não houve nova informação sobre o irmão em 19/05/2026."], "evidencias": ["T001-R01", "T001-R02"]},
+        "moradia": {"status_dados": "com_dados", "situacao_atual": "Em 19/05/2026, a pessoa informou ter alugado um quarto em 17/05/2026, sem duração do contrato registrada.", "mudancas": "Em 05/05/2026, informou dormir em abrigo provisório; em 19/05/2026, informou ter alugado um quarto.", "lacunas_divergencias": ["Não foi registrada a duração do contrato do quarto."], "evidencias": ["T001-R01", "T001-R02"]}
+      }
+    },
+    {
+      "entrada": {"caso": "TREINO-002", "entrada": "E02", "registros": [{"id": "T002-R01", "data": "2026-06-02", "entrada": "E02", "texto": "Primeiro registro desta entrada. Não foram informados dados sobre consumo de substâncias. A pessoa relatou conflito recente com a filha. O campo moradia indica casa própria, enquanto a observação informa hospedagem temporária na casa de uma amiga. A divergência não foi esclarecida."}]},
+      "saida": {
+        "consumo": {"status_dados": "sem_dados", "situacao_atual": "Não há informação sobre consumo de substâncias nos registros selecionados.", "mudancas": "Não há registros suficientes para descrever mudanças.", "lacunas_divergencias": ["Ausência de informação não significa ausência de consumo."], "evidencias": []},
+        "familia": {"status_dados": "com_dados", "situacao_atual": "Em 02/06/2026, a pessoa relatou conflito recente com a filha.", "mudancas": "Não há registros suficientes para descrever mudanças.", "lacunas_divergencias": ["Existe apenas um registro sobre o vínculo familiar nesta entrada."], "evidencias": ["T002-R01"]},
+        "moradia": {"status_dados": "divergente", "situacao_atual": "Em 02/06/2026, há informações divergentes: o campo indica casa própria e a observação informa hospedagem temporária na casa de uma amiga.", "mudancas": "Não é possível descrever mudança com um único registro.", "lacunas_divergencias": ["A divergência sobre a moradia não foi esclarecida."], "evidencias": ["T002-R01"]}
+      }
+    }
+  ]
+}

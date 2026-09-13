@@ -1,0 +1,61 @@
+{
+  "caso": "FIC-002",
+  "entrada": "E02",
+  "modelo": "qwen3:4b",
+  "versao_prompt": 2,
+  "status": "Pendente de revisão",
+  "tempo_total_segundos": 33.96,
+  "tempo_carga_segundos": 0.0,
+  "tempo_geracao_segundos": 33.29,
+  "resumo": {
+    "afirmacoes": [
+      {
+        "assunto": "Situação de moradia",
+        "afirmacao": "A assistida continua dormindo na rua, conforme registrado em 2026-08-26, mas o campo de situação de moradia foi preenchido como residência familiar em 2026-08-26. Divergência não esclarecida até 2026-09-09.",
+        "evidencias": [
+          {
+            "registro_id": "FIC002-R03",
+            "trecho": "O campo de situação de moradia foi preenchido como residência familiar, mas a observação do mesmo atendimento registra que ela continua dormindo na rua."
+          },
+          {
+            "registro_id": "FIC002-R04",
+            "trecho": "A divergência sobre moradia permanece sem esclarecimento."
+          }
+        ]
+      },
+      {
+        "assunto": "Solicitação de documento",
+        "afirmacao": "A assistida solicitou apoio para obter segunda via de documento em 2026-08-12, agendou atendimento para obter documento em 02/09 em 2026-08-26, mas não apresentou comprovante do agendamento e não houve confirmação de emissão do documento até 2026-09-09.",
+        "evidencias": [
+          {
+            "registro_id": "FIC002-R02",
+            "trecho": "Solicitou apoio para obter segunda via de documento."
+          },
+          {
+            "registro_id": "FIC002-R03",
+            "trecho": "A assistida relatou ter agendado atendimento para obter documento em 02/09."
+          },
+          {
+            "registro_id": "FIC002-R04",
+            "trecho": "Não há confirmação sobre comparecimento ao agendamento de documentação nem emissão do documento."
+          }
+        ]
+      },
+      {
+        "assunto": "Contato com a mãe",
+        "afirmacao": "A assistida retomou contato telefônico com a mãe em 2026-09-09, sem relatar mudança de residência.",
+        "evidencias": [
+          {
+            "registro_id": "FIC002-R04",
+            "trecho": "Informou ter retomado contato telefônico com a mãe, sem relatar mudança de residência."
+          }
+        ]
+      }
+    ],
+    "limitacoes": [
+      "Não há registros suficientes para confirmar a emissão do documento ou comparecimento ao agendamento após 2026-09-09."
+    ]
+  },
+  "erros_de_referencias": [],
+  "observacao": "Validação de referências não comprova fidelidade semântica nem ausência de omissões."
+}

@@ -1,0 +1,82 @@
+{
+  "caso": "FIC-001",
+  "entrada": "E01",
+  "modelo": "qwen3:4b",
+  "metodo": "instrucoes_e_exemplos_supervisionados",
+  "versao_prompt": 3,
+  "status": "Pendente de revisão",
+  "tempo_total_segundos": 81.9,
+  "tempo_carga_segundos": 8.53,
+  "tempo_geracao_segundos": 71.08,
+  "resumo": {
+    "consumo": {
+      "status_dados": "com_dados",
+      "situacao_atual": "Em 07/09/2026, o assistido relatou uso de álcool em dois dias da semana anterior.",
+      "mudancas": "Houve mudança autorrelatada de uso de álcool em cinco dias da semana anterior, em 10/08/2026, para uso em dois dias da semana anterior, em 24/08/2026.",
+      "lacunas_divergencias": [
+        "Não há informação registrada sobre a frequência de uso de álcool após 24/08/2026."
+      ],
+      "evidencias": [
+        {
+          "registro_id": "FIC001-R02",
+          "trecho": "Relatou uso de álcool em cinco dias da semana anterior."
+        },
+        {
+          "registro_id": "FIC001-R03",
+          "trecho": "Relatou uso de álcool em dois dias da semana anterior."
+        }
+      ]
+    },
+    "familia": {
+      "status_dados": "com_dados",
+      "situacao_atual": "Em 07/09/2026, a pessoa informou que a irmã o visitou.",
+      "mudancas": "Houve contato com a irmã por telefone em 10/08/2026; em 24/08/2026, não houve informação sobre contato; em 07/09/2026, a irmã o visitou.",
+      "lacunas_divergencias": [
+        "Não há informação sobre contato com a irmã após 07/09/2026."
+      ],
+      "evidencias": [
+        {
+          "registro_id": "FIC001-R02",
+          "trecho": "Informou que conversou com a irmã por telefone."
+        },
+        {
+          "registro_id": "FIC001-R03",
+          "trecho": "Não houve informação sobre contato com a irmã."
+        },
+        {
+          "registro_id": "FIC001-R04",
+          "trecho": "A irmã o visitou."
+        }
+      ]
+    },
+    "moradia": {
+      "status_dados": "com_dados",
+      "situacao_atual": "Em 07/09/2026, o assistido continua hospedado na casa do conhecido.",
+      "mudancas": "Em 03/08/2026, informou estar sem moradia fixa; em 24/08/2026, informou estar hospedado na casa de um conhecido desde 20/08/2026, sem definição do período de permanência; em 07/09/2026, continua hospedado na casa do conhecido.",
+      "lacunas_divergencias": [
+        "Não foi definido o período de permanência na casa do conhecido."
+      ],
+      "evidencias": [
+        {
+          "registro_id": "FIC001-R01",
+          "trecho": "O assistido relata estar sem moradia fixa."
+        },
+        {
+          "registro_id": "FIC001-R03",
+          "trecho": "Informou estar hospedado na casa de um conhecido desde 20/08, sem definição do período de permanência."
+        },
+        {
+          "registro_id": "FIC001-R04",
+          "trecho": "O assistido informou que continua hospedado na casa do conhecido."
+        }
+      ]
+    }
+  },
+  "erros_de_estrutura_referencias": [
+    "consumo: trecho não encontrado literalmente na fonte.",
+    "familia: trecho não encontrado literalmente na fonte.",
+    "familia: trecho não encontrado literalmente na fonte.",
+    "moradia: trecho não encontrado literalmente na fonte."
+  ],
+  "observacao": "A validação automática não comprova fidelidade semântica nem cobertura."
+}

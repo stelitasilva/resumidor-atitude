@@ -1,0 +1,38 @@
+{
+  "aviso": "Dados integralmente fictícios, criados exclusivamente para teste acadêmico. Não representam pessoas ou atendimentos reais.",
+  "casos": [
+    {
+      "id": "FIC-001",
+      "nome": "Caso fictício 01",
+      "entrada": "E01",
+      "objetivo_teste": "Preservar datas, atribuir autorrelatos e descrever mudanças sem classificar globalmente o caso.",
+      "registros": [
+        {"id": "FIC001-R01", "data": "2026-08-03", "entrada": "E01", "texto": "Admissão fictícia. O assistido relata estar sem moradia fixa. Informa contato eventual com a irmã e interesse em retomar os estudos. Não há informação registrada sobre renda. Foi combinado novo encontro para 10/08/2026."},
+        {"id": "FIC001-R02", "data": "2026-08-10", "entrada": "E01", "texto": "O assistido compareceu ao encontro. Relatou uso de álcool em cinco dias da semana anterior. Informou que conversou com a irmã por telefone. Foi combinado avaliar alternativas de educação no encontro seguinte; não há registro de matrícula escolar."},
+        {"id": "FIC001-R03", "data": "2026-08-24", "entrada": "E01", "texto": "O assistido relatou uso de álcool em dois dias da semana anterior. Informou estar hospedado na casa de um conhecido desde 20/08, sem definição do período de permanência. Pediu informações sobre educação de jovens e adultos. O técnico forneceu informações; não registrou encaminhamento formal nem matrícula."},
+        {"id": "FIC001-R04", "data": "2026-09-07", "entrada": "E01", "texto": "O assistido informou que continua hospedado na casa do conhecido e que a irmã o visitou. Não foi registrada nova avaliação sobre frequência de uso de álcool. A busca de informações sobre educação permanece em andamento, sem confirmação de matrícula."}
+      ]
+    },
+    {
+      "id": "FIC-002",
+      "nome": "Caso fictício 02",
+      "entrada": "E02",
+      "objetivo_teste": "Distinguir entradas, conflitos e informação não confirmada; não inventar diagnósticos ou condutas.",
+      "registros": [
+        {"id": "FIC002-R01", "data": "2026-02-10", "entrada": "E01", "texto": "Registro de período anterior, encerrado em 28/02/2026. Naquela data, a assistida informou morar com a mãe e realizar trabalho eventual. Essas informações não foram confirmadas para a entrada E02."},
+        {"id": "FIC002-R02", "data": "2026-08-12", "entrada": "E02", "texto": "Início do novo período fictício de acompanhamento. A assistida informou estar em situação de rua e sem contato recente com a mãe. Solicitou apoio para obter segunda via de documento. Não informou situação atual de trabalho ou renda."},
+        {"id": "FIC002-R03", "data": "2026-08-26", "entrada": "E02", "texto": "A assistida relatou ter agendado atendimento para obter documento em 02/09. Não apresentou comprovante do agendamento. O campo de situação de moradia foi preenchido como residência familiar, mas a observação do mesmo atendimento registra que ela continua dormindo na rua. Divergência ainda não esclarecida."},
+        {"id": "FIC002-R04", "data": "2026-09-09", "entrada": "E02", "texto": "A assistida compareceu ao atendimento do programa. Não há confirmação sobre comparecimento ao agendamento de documentação nem emissão do documento. A divergência sobre moradia permanece sem esclarecimento. Informou ter retomado contato telefônico com a mãe, sem relatar mudança de residência."}
+      ]
+    },
+    {
+      "id": "FIC-003",
+      "nome": "Caso fictício 03",
+      "entrada": "E01",
+      "objetivo_teste": "Reconhecer que um único registro não permite descrever mudança temporal.",
+      "registros": [
+        {"id": "FIC003-R01", "data": "2026-09-10", "entrada": "E01", "texto": "Primeiro atendimento fictício. O assistido solicitou informações sobre acesso a documentação. Informou telefone de uma pessoa de referência, sem indicar parentesco. Não foram registrados dados sobre moradia, renda, vínculos familiares, saúde ou uso de substâncias. Foi combinado retorno em 17/09/2026. Não há outros atendimentos registrados para este caso."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "caso": "FIC-001",
+  "entrada": "E01",
+  "modelo": "qwen3:4b",
+  "status": "Pendente de revisão",
+  "tempo_total_segundos": 48.84,
+  "tempo_carga_segundos": 8.61,
+  "tempo_geracao_segundos": 39.19,
+  "resumo": {
+    "afirmacoes": [
+      {
+        "assunto": "Situação de moradia",
+        "afirmacao": "O assistido relata estar sem moradia fixa (FIC001-R01, 2026-08-03).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R01",
+            "trecho": "Admissão fictícia. O assistido relata estar sem moradia fixa."
+          }
+        ]
+      },
+      {
+        "assunto": "Uso de álcool",
+        "afirmacao": "O assistido relatou uso de álcool em cinco dias da semana anterior (FIC001-R02, 2026-08-10).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R02",
+            "trecho": "O assistido compareceu ao encontro. Relatou uso de álcool em cinco dias da semana anterior."
+          }
+        ]
+      },
+      {
+        "assunto": "Situação de moradia",
+        "afirmacao": "O assistido informou estar hospedado na casa de um conhecido desde 20/08, sem definição do período de permanência (FIC001-R03, 2026-08-24).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R03",
+            "trecho": "Informou estar hospedado na casa de um conhecido desde 20/08, sem definição do período de permanência."
+          }
+        ]
+      },
+      {
+        "assunto": "Busca por educação",
+        "afirmacao": "O assistido pediu informações sobre educação de jovens e adultos e foi fornecido informações pelo técnico, sem registro de matrícula (FIC001-R03, 2026-08-24).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R03",
+            "trecho": "Pediu informações sobre educação de jovens e adultos. O técnico forneceu informações; não registrou encaminhamento formal nem matrícula."
+          }
+        ]
+      },
+      {
+        "assunto": "Situação de moradia",
+        "afirmacao": "O assistido informou que continua hospedado na casa do conhecido e que a irmã o visitou (FIC001-R04, 2026-09-07).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R04",
+            "trecho": "O assistido informou que continua hospedado na casa do conhecido e que a irmã o visitou."
+          }
+        ]
+      },
+      {
+        "assunto": "Busca por educação",
+        "afirmacao": "A busca de informações sobre educação permanece em andamento, sem confirmação de matrícula (FIC001-R04, 2026-09-07).",
+        "evidencias": [
+          {
+            "registro_id": "FIC001-R04",
+            "trecho": "A busca de informações sobre educação permanece em andamento, sem confirmação de matrícula."
+          }
+        ]
+      }
+    ],
+    "limitacoes": [
+      "Não há registros suficientes para comparar a evolução do uso de álcool ao longo do tempo."
+    ]
+  },
+  "erros_de_referencias": [],
+  "observacao": "Validação de referências não comprova fidelidade semântica nem ausência de omissões."
+}
