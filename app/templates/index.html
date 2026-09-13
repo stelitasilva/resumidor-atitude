@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo do acompanhamento</title>
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <header class="top-navbar">
+        <div class="navbar-left">
+            <div class="gov-logo">
+                <span style="font-size: 0.8rem; font-weight: bold; line-height: 1.1; display: inline-block;">Secretaria de<br>Assistência Social</span>
+            </div>
+            <div class="navbar-title">Administrador SEPOD</div>
+        </div>
+        <div class="navbar-right">
+            <span class="user-greeting">Olá, <strong>TÉCNICO ATITUDE</strong></span>
+            <div class="navbar-icons">
+                <span class="icon">🔔</span>
+                <span class="icon font-size" style="font-weight: bold;">A- A A+</span>
+                <span class="icon contrast">🌗</span>
+            </div>
+            <button class="btn-sair">Sair</button>
+        </div>
+    </header>
+
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-atitude">
+                    <span style="color: #e63946;">a</span><span style="color: #457b9d;">ti</span><span style="color: #fca311;">tu</span><span style="color: #2a9d8f;">de</span>
+                    <div class="logo-sub">PROGRAMA</div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <div class="menu-section">OPERACIONAL</div>
+                <a href="#" class="menu-item"><span class="menu-icon">⊞</span> Dashboard</a>
+                <a href="#" class="menu-item"><span class="menu-icon">👥</span> Assistidos</a>
+                <a href="#" class="menu-item active"><span class="menu-icon">📄</span> Resumo Temático</a>
+                
+                <div class="menu-section">CONFIGURAÇÕES</div>
+                <a href="#" class="menu-item"><span class="menu-icon">🏢</span> Gestão dos Núcleos</a>
+                <a href="#" class="menu-item"><span class="menu-icon">📋</span> Gestão das Modalidades</a>
+                <a href="#" class="menu-item"><span class="menu-icon">🏠</span> Gestão das Moradias</a>
+                <a href="#" class="menu-item"><span class="menu-icon">🤝</span> Gestão das OSCs</a>
+                <a href="#" class="menu-item"><span class="menu-icon">📍</span> Gestão das Abrangências</a>
+                <a href="#" class="menu-item"><span class="menu-icon">🏛️</span> Gestão dos Municípios</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="breadcrumb">Início &gt; Assistidos &gt; <span>Resumo Temático</span></div>
+            
+            <div class="page-header">
+                <div>
+                    <h1>Resumo Temático de Acompanhamento</h1>
+                    <p>Consulte os registros do prontuário e gere o resumo estruturado.</p>
+                </div>
+                <button class="btn-secondary">Voltar</button>
+            </div>
+
+            <div class="aviso-ficticio">Protótipo acadêmico — somente dados fictícios</div>
+            
+            <div class="content-grid">
+                <!-- Coluna de Seleção -->
+                <section class="panel">
+                    <div class="panel-header">
+                        <span class="panel-icon">👤</span> <h2>Identificação e Seleção</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div>
+                            <label for="caso-select" style="font-weight: bold; font-size: 0.85rem; color: #555;">CASO FICTÍCIO *</label>
+                            <select id="caso-select" class="form-control">
+                                <option value="">Selecione um caso...</option>
+                            </select>
+                        </div>
+                        
+                        <div id="entrada-info" style="margin-top: 1rem; font-weight: bold; color: #1d4ed8;"></div>
+                        
+                        <div id="registros-container" style="margin-top: 1rem;">
+                            <!-- Registros serão carregados aqui -->
+                        </div>
+                        
+                        <div class="actions-row" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                            <button id="gerar-btn" class="btn-primary" disabled>Gerar resumo</button>
+                            <button id="buscar-historico-btn" class="btn-secondary" disabled>Histórico de revisões</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Coluna de Resultados -->
+                <section class="panel">
+                    <div class="panel-header">
+                        <span class="panel-icon">📝</span> <h2>Resultado e Revisão</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div id="processing-msg" class="processing">
+                            ⏳ Gerando resumo local com a IA. Isso pode levar até dois minutos...
+                        </div>
+                        
+                        <div id="error-global" class="error-msg" style="display:none; margin-bottom: 1rem;"></div>
+
+                        <div id="result-area" class="result-area">
+                            <div class="aviso-pendente">Pendente de revisão pelo técnico</div>
+                            
+                            <div id="cartoes-tematicos">
+                                <!-- Cartões injetados via JS -->
+                            </div>
+                            
+                            <div id="tempo-info"></div>
+
+                            <div class="revisao-box" style="margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem;">
+                                <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.1rem; color: #1e293b;">Revisão do Técnico</h3>
+                                <div style="margin-bottom: 1rem;">
+                                    <label for="revisor-nome" style="font-weight: bold; font-size: 0.85rem; color: #555;">NOME DO REVISOR *</label>
+                                    <input type="text" id="revisor-nome" class="form-control" placeholder="Digite seu nome completo">
+                                </div>
+                                <button id="salvar-revisao-btn" class="btn-primary">Salvar revisão</button>
+                                <div id="revisao-msg" style="color: #15803d; margin-top: 0.5rem; display: none; font-weight: bold;">✓ Revisão salva com sucesso!</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="app-footer">
+                <div>E-mail Secretaria: sepod@sas.pe.gov.br &nbsp;|&nbsp; Telefones: SAS — PABX (81) 3183-3000 &nbsp;|&nbsp; Endereço: Av. Cruz Cabugá, 665 — Santo Amaro, Recife/PE &nbsp;|&nbsp; <a href="#">Política de Privacidade</a></div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Modal para Fontes -->
+    <div id="fonte-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-titulo" style="margin-top: 0;">Fonte Original</h2>
+            <div id="modal-data" style="font-weight: bold; margin-bottom: 1rem; color: #666;"></div>
+            <div id="modal-texto" style="white-space: pre-wrap; line-height: 1.5;"></div>
+        </div>
+    </div>
+
+    <!-- Modal para Histórico -->
+    <div id="historico-modal" class="modal">
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
+            <span class="close-historico-btn close-btn">&times;</span>
+            <h2 style="margin-top: 0;">Histórico de Gerações e Revisões</h2>
+            <p style="color: #64748b;">Mostrando histórico para a exata seleção de registros atuais.</p>
+            <div id="historico-revisoes-conteudo" style="margin-top: 1rem;"></div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
