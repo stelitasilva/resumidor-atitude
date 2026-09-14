@@ -49,7 +49,7 @@ class SummarizerService:
     def __init__(self, ollama_client: OllamaClient):
         self.ollama = ollama_client
         self.treino_path = Path("dados/exemplos_treinamento.json")
-        self.model_name = "phi4:mini"
+        self.model_name = "tinyllama"
 
     def _carregar_mensagens_treinamento(self) -> List[Dict[str, str]]:
         mensagens = [{"role": "system", "content": SYSTEM}]
